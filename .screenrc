@@ -1,6 +1,6 @@
 # the following two lines give a two-line status, with the current window highlighted
 hardstatus alwayslastline
-hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+hardstatus string '%{= kG}[ %{G}%H%? %1`%?%{g} ][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][ %{B}%m/%d %{W}%C%A%{g} ]'
 
 # huge scrollback buffer
 defscrollback 30000
@@ -14,12 +14,20 @@ attrcolor b ".I"
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
 
+# detach session on hangup instead of terminating the screen completely
+autodetach on
+
+# window numbering starts at 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+
 # default windows
 #screen -t Shell1  1 bash
 #screen -t Shell2  2 bash
-#screen -t Python  3 python3
+#screen -t Python  3 python
 #screen -t Media   4 bash
-#select 0
+#select 1
 
-bind c screen 1 # window numbering starts at 1 not 0
-#bind 0 select 10
+# disable if default windows is enabled
+screen 1

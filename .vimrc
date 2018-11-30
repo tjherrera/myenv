@@ -34,9 +34,9 @@ set undolevels=100
 
 call matchadd('colorColumn', '\%121v', 100)
 
-"python
+" python
+" we can do 'set textwidth=79'
 au BufNewFile,BufRead *.py
-    \ set textwidth=79 |
     \ set fileformat=unix |
     \ set encoding=utf-8
 highlight BadWhitespace ctermbg=red guibg=darkred

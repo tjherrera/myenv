@@ -11,12 +11,9 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
-set number
 set wildmenu
 set lazyredraw
-set showmatch
 set ruler
-set cursorline
 
 set incsearch
 set hlsearch
@@ -41,3 +38,9 @@ au BufNewFile,BufRead *.py
     \ set encoding=utf-8
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+" useful but I don't prefer them
+"set number
+"set showmatch
+"set cursorline

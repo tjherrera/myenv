@@ -31,7 +31,7 @@ set backspace=indent,eol,start
 set history=100
 set undolevels=100
 
-call matchadd('colorColumn', '\%101v', 100)
+call matchadd('colorColumn', '\%121v', 100)
 
 "python
 au BufNewFile,BufRead *.py
